@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,10 +18,19 @@ body {
 	background-repeat: no-repeat;
 	min-height: 100vh;
 }
+
+.wrapper {
+	background-color: rgb(245, 245, 245);
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
 .logo-nav {
 	display: flex;
 	width: 100%;
-
+	overflow: hidden;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -30,19 +40,19 @@ body {
 	width: 5%;
 	margin-left: 1%;
 }
+
 /*style of navigation bar */
 
 .navbar {
-	width: 100%;
-	position: relative;
-	overflow: hidden;
 	background: linear-gradient(
 		315deg,
 		rgba(31, 46, 68, 0.9945728291316527) 0%,
 		rgba(56, 55, 60, 0.9945728291316527) 96%
 	);
-	padding: 2%;
+	width: 100%;
+	padding: 1%;
 }
+
 /*removing bullet point on list of navigation bar  */
 
 .navbar ul {
@@ -52,6 +62,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 /* style of navigation bar */
 
 .navbar li a {
@@ -61,38 +72,328 @@ body {
 	padding: 14px 16px;
 	text-decoration: none;
 }
+
 /* Change color on hover for navigation bar */
 
 .navbar a:hover {
 	background-color: #ddd;
 	color: black;
 }
+
+/*title*/
 .title {
-	position: absolute;
-	top: 10%;
-	left: 20%;
-	padding: 3%;
-	padding-top: 12%;
+	width: 80%;
 	font-size: 25px;
-	color: black;
+	color: rgb(238, 240, 155);
 	display: block;
-}
-.title h1 {
 	position: absolute;
-	top: 25%;
-	left: 15%;
+	left: 3%;
+	top: 190;
 }
-/******************************************************meal*******************************************/
-table {
-	width: 50%;
-	margin: 3%;
+
+.title p {
+	font-size: 35px;
+	position: absolute;
+	left: 1%;
+}
+
+.front-image {
+	width: 100%;
+}
+
+.front-image img {
+	align-items: center;
+	width: 100%;
+}
+
+footer {
+	display: flex;
+	clear: both;
+	padding: 10px;
+	color: rgb(245, 245, 252);
+	text-align: center;
+	background: linear-gradient(
+		315deg,
+		rgba(31, 46, 68, 0.9945728291316527) 0%,
+		rgba(56, 55, 60, 0.9945728291316527) 96%
+	);
+	height: 20%;
+	line-height: 2.5;
+	padding: 1%;
+}
+
+.api {
+	font-family: arial;
+	width: 100%;
+	display: block;
+	color: rgb(255, 255, 255);
+	margin-left: 1%;
+}
+
+.api a:link,
+a:visited {
+	text-decoration: none;
+	color: rgb(245, 245, 245);
+}
+
+.copy-right {
+	font-family: arial;
+	width: 100%;
+	display: flex;
+	padding: 1% 6%;
+}
+
+.contact {
+	width: 100%;
+	display: block;
+	font-family: arial;
+}
+
+/******************************************************meals*******************************************/
+.allMeals:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.meal-card {
+	background-color: rgb(245, 245, 245);
+	padding: 20px;
+	margin-top: 20px;
+}
+
+.img-container {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+.meal-type {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 23.53%;
+	border-radius: 5px;
+	float: left;
+	margin: 10px;
+	background-color: rgb(245, 245, 245);
+}
+
+.meal-type:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+	width: 100%;
+}
+
+.meal-container {
+	padding: 2px 16px;
+}
+
+.meal-text {
+	width: 100%;
+	padding: 10px;
+}
+
+.meal-text p {
+	padding: 2px 16px;
+	height: 17%;
+}
+
+.meal-text h4 {
+	font-size: 22px;
+	padding: 6px 10px;
+	height: 9%;
+}
+
+.price {
+	width: 100%;
+	margin: 8% 8%;
+}
+.number_of_reservations {
+	color: #238327;
+	width: 100%;
+	margin: 8% 8%;
+}
+
+.add-meal-and-reviews {
+	width: 100%;
+	display: flex;
+}
+
+.add-meal,
+.add-reviews {
+	width: 100%;
+	padding: 10px;
+}
+
+.add-meal button {
+	padding: 10px 30px;
+	margin-bottom: 5%;
+	cursor: pointer;
+	outline: none;
+	display: block;
+	width: 100%;
+	position: relative;
+	border: none;
+	color: rgb(6, 8, 7);
+	border-radius: 100px;
+	font-weight: 700;
+	box-shadow: 0 6px rgba(244, 248, 250, 0.13);
+	background-color: rgba(4, 107, 155, 0.2);
+}
+
+.add-reviews button {
+	padding: 10px 10px;
+	margin-bottom: 5%;
+	cursor: pointer;
+	outline: none;
+	display: block;
+	width: 100%;
+	position: relative;
+	border: none;
+	color: rgb(6, 8, 7);
+	border-radius: 100px;
+	font-weight: 700;
+	box-shadow: 0 6px rgba(244, 248, 250, 0.13);
+	background-color: rgba(4, 107, 155, 0.2);
+}
+
+.add-meal a:link {
+	text-decoration: none;
+	color: rgb(12, 1, 1);
+}
+
+.add-meal a:visited {
+	text-decoration: none;
+	color: rgb(12, 1, 1);
+}
+
+.add-reviews a:link {
+	text-decoration: none;
+	color: rgb(12, 1, 1);
+}
+
+.add-reviews a:visited {
+	text-decoration: none;
+	color: rgb(12, 1, 1);
+}
+
+.add-reviews button:hover {
+	background-color: #ced12b;
+}
+
+.add-meal button:hover {
+	background-color: #238327;
+}
+
+.add-reviews button:active {
+	transform: translateY(4px);
+}
+
+.add-meal button:active {
+	transform: translateY(4px);
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Responsive layout - when the screen is less than 700px wide */
+@media screen and (max-width: 800px) {
+	.wrappe {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.allMeals {
+		width: 100%;
+		padding: 5%;
+		margin: 2%;
+	}
+
+	.logo-nav,
+	.navbar a,
+	.meal-card,
+	.meal-container,
+	.meal-text,
+	.meal-text h4,
+	.meal-type {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+}
+
+/* Responsive on layout of item card, contact and of navigation bar - when the screen is less than 500px wide*/
+@media screen and (max-width: 470px) {
+	.meal-card,
+	.meal-container,
+	.meal-text,
+	.meal-type {
+		float: none;
+		width: 100%;
+	}
+
+	.navbar a,
+	.logo-nav {
+		float: none;
+		width: 100%;
+	}
+
+	.meal-text p,
+	.meal-text h4 {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.fa {
+	padding: 2px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+/******************************************************social meadia*******************************************/
+
+/* Change color on hover for icon */
+.fa:hover {
+	opacity: 0.7;
+}
+
+/* facebook icon */
+.fa-facebook {
+	background: #3b5998;
+	color: white;
+}
+
+/* instagram icon */
+.fa-instagram {
+	background: #125688;
+	color: white;
+}
+
+/* twitter icon */
+.fa-twitter {
+	background: #55acee;
+	color: white;
 }
 
 table {
+	width: 50%;
+	margin: 3%;
 	border-collapse: collapse;
 }
-table.mealList {
-	width: 50%;
+
+.table.mealList {
+	width: 80%;
 }
 
 td,
@@ -101,13 +402,25 @@ th {
 	text-align: left;
 	padding: 8px;
 }
+
 tr:nth-child(even),
-table.list thead > tr {
+table.mealList thead > tr {
 	background-color: #dddddd;
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 input[type="number"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+textarea {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -139,7 +452,7 @@ a {
 	margin-right: 4px;
 }
 
-label.ID-validation-error {
+label.validation-error {
 	color: red;
 	margin-left: 5px;
 }
@@ -147,30 +460,61 @@ label.ID-validation-error {
 .hide {
 	display: none;
 }
-.meal {
-	padding: 2%;
-	margin: 3%;
-	display: flex;
-}
-.meal li {
-	padding: 2%;
-	font-size: 20px;
-}
-.mealId {
-	padding: 2%;
 
-	display: block;
-}
-.mealTitle {
-	padding: 2%;
-
-	display: block;
-}
-/*********************************new************************/
 table tr:not(:first-child) {
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
 }
+
 table tr:not(:first-child):hover {
 	background-color: #ddd;
+}
+
+.book-meal {
+	width: 100%;
+	margin: 2% 34%;
+}
+
+.reserv-form {
+	width: 100%;
+	margin: 0% 18%;
+	padding: 2%;
+}
+
+.reserv-form h1 {
+	margin: 1% 4%;
+}
+/*********************************reviews************************/
+.stars {
+	width: 100%;
+	padding: 2%;
+	margin: 3%;
+}
+
+.stars-outer {
+	position: relative;
+	display: inline-block;
+}
+
+.stars-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+}
+
+.stars-outer::before {
+	content: "\f005 \f005 \f005 \f005 \f005";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	color: #ccc;
+}
+
+.stars-inner::before {
+	content: "\f005 \f005 \f005 \f005 \f005";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	color: #f8ce0b;
 }
