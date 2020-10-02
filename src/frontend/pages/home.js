@@ -13,10 +13,11 @@ window.handleHomeRequest = () => {
     <!--sections with header and main picture with navigation bar-->
     <div class="wrapper">
         <!--navigation bar-->
-        <div class="logo-nav">
-
+         
+          <div class="logo-nav">
+             <img src="./images/logo1.jpg" alt="logo">
             <nav class="navbar">
-                <img src="./images/logo1.jpg" alt="logo">
+               
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="meals" data-navigo>Meals</a></li>
@@ -26,7 +27,8 @@ window.handleHomeRequest = () => {
 
                 </ul>
             </nav>
-        </div>
+          </div>
+       
         <div class="front-image">
            <div class="title">
                <h1>International food fair</h1>
@@ -34,7 +36,7 @@ window.handleHomeRequest = () => {
             </div>
             <img src="./images/background2.jpg" alt="street-food">
         </div>
-
+</div>
        <!--footer-->
     <footer>
         <div class=" api">
@@ -58,7 +60,7 @@ window.handleHomeRequest = () => {
 
         </div>
     </footer>
-    </div>
+    
 </body>
  
   

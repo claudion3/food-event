@@ -5,7 +5,8 @@ window.handleAddReviewsRequest = async (params) => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="shortcut icon" href="./images/icon.jpg" />
 </head>
 
 <body>
@@ -13,9 +14,10 @@ window.handleAddReviewsRequest = async (params) => {
     <div class="wrapper">
         <!--navigation bar-->
         <div class="logo-nav">
+            <img src="./images/logo1.jpg" alt="logo">
 
             <nav class="navbar">
-               <img src="./images/logo1.jpg" alt="logo">
+                
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="meals" data-navigo>Meals</a></li>

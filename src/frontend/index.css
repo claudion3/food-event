@@ -9,7 +9,6 @@
 
 /*************home********************/
 body {
-	background: rgb(204, 212, 212);
 	background: radial-gradient(
 		circle,
 		rgba(204, 212, 212, 1) 0%,
@@ -28,6 +27,11 @@ body {
 }
 
 .logo-nav {
+	background: linear-gradient(
+		315deg,
+		rgba(31, 46, 68, 0.9945728291316527) 0%,
+		rgba(56, 55, 60, 0.9945728291316527) 96%
+	);
 	display: flex;
 	width: 100%;
 	overflow: hidden;
@@ -37,20 +41,19 @@ body {
 }
 
 .logo-nav img {
-	width: 5%;
-	margin-left: 1%;
+	width: 4%;
 }
 
 /*style of navigation bar */
 
 .navbar {
+	width: 100%;
+	padding: 1%;
 	background: linear-gradient(
 		315deg,
 		rgba(31, 46, 68, 0.9945728291316527) 0%,
 		rgba(56, 55, 60, 0.9945728291316527) 96%
 	);
-	width: 100%;
-	padding: 1%;
 }
 
 /*removing bullet point on list of navigation bar  */
@@ -105,7 +108,7 @@ body {
 	align-items: center;
 	width: 100%;
 }
-
+/******************************************************footer*******************************************/
 footer {
 	display: flex;
 	clear: both;
@@ -301,57 +304,7 @@ img {
 	display: table;
 }
 
-/* Responsive layout - when the screen is less than 700px wide */
-@media screen and (max-width: 800px) {
-	.wrappe {
-		width: 100%;
-		padding: 0;
-		margin: 0;
-	}
-
-	.allMeals {
-		width: 100%;
-		padding: 5%;
-		margin: 2%;
-	}
-
-	.logo-nav,
-	.navbar a,
-	.meal-card,
-	.meal-container,
-	.meal-text,
-	.meal-text h4,
-	.meal-type {
-		float: none;
-		width: 100%;
-		height: auto;
-	}
-}
-
-/* Responsive on layout of item card, contact and of navigation bar - when the screen is less than 500px wide*/
-@media screen and (max-width: 470px) {
-	.meal-card,
-	.meal-container,
-	.meal-text,
-	.meal-type {
-		float: none;
-		width: 100%;
-	}
-
-	.navbar a,
-	.logo-nav {
-		float: none;
-		width: 100%;
-	}
-
-	.meal-text p,
-	.meal-text h4 {
-		float: none;
-		width: 100%;
-		height: auto;
-	}
-}
-
+/******************************************************social meadia*******************************************/
 .fa {
 	padding: 2px;
 	font-size: 30px;
@@ -360,8 +313,6 @@ img {
 	text-decoration: none;
 	margin: 5px 2px;
 }
-
-/******************************************************social meadia*******************************************/
 
 /* Change color on hover for icon */
 .fa:hover {
@@ -517,4 +468,99 @@ table tr:not(:first-child):hover {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
 	color: #f8ce0b;
+}
+/* Responsive layout - when the screen is less than 700px wide */
+@media screen and (max-width: 700px) {
+	body,
+	.wrapper {
+		width: 100%;
+		position: relative;
+		margin: 0%;
+		padding: 0%;
+	}
+	.navbar a,
+	.logo-nav {
+		float: none;
+		width: 100%;
+		display: block;
+	}
+	.front-image {
+		width: 100%;
+		font-weight: bold;
+	}
+	.allMeals {
+		width: 100%;
+	}
+
+	.meal-card,
+	.meal-container,
+	.meal-text,
+	.meal-text h4,
+	.meal-type {
+		width: 100%;
+		height: auto;
+	}
+	footer {
+		font-size: 13px;
+		text-align: center;
+		height: auto;
+		display: flex;
+		width: 100%;
+	}
+	.copy-right {
+		display: block;
+	}
+}
+
+/* Responsive on layout of item card, contact and of navigation bar - when the screen is less than 500px wide*/
+@media screen and (max-width: 470px) {
+	body,
+	.wrapper {
+		width: 100%;
+		position: relative;
+		float: none;
+		margin: 0%;
+		padding: 0%;
+	}
+	.title {
+		position: relative;
+	}
+	.title p {
+		font-size: 18px;
+	}
+
+	.title h1 {
+		font-size: 20px;
+	}
+	.meal-card,
+	.meal-container,
+	.meal-text,
+	.meal-type {
+		width: 100%;
+	}
+	.navbar ul {
+		float: none;
+		align-items: center;
+		display: block;
+		height: auto;
+	}
+	.navbar,
+	.logo-nav {
+		width: 100%;
+		height: auto;
+	}
+	.logo-nav img {
+		width: 15%;
+	}
+	.meal-text p,
+	.meal-text h4 {
+		width: 100%;
+		height: auto;
+	}
+	footer {
+		text-align: center;
+		height: auto;
+		display: block;
+		width: 100%;
+	}
 }
