@@ -1,6 +1,7 @@
 # Food event website
 
-A mini project in the 8 months web development couse at Hack your future, copenhagen.
+This is a mini project I created during my web development course at Hack your future,
+                            Copenhagen.
 
 ## About the app
 The main aim of this application is to offer meals and reserve meals.
@@ -26,3 +27,6 @@ Customer can reserve a meal.
 6. Knex
 7. Navigo(vanilla JavaScript router )
 8. Rest API
+
+## website
+<a href="https://food-event.herokuapp.com/" target="_blank">food-event</a>
