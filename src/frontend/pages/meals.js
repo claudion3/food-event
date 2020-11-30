@@ -7,6 +7,7 @@ window.handleMealsRequest = () => {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="./images/icon.jpg" />
     <link rel="stylesheet" href="./index.css" />
+     
 </head>
 <body>
     <!--sections with header and main picture with navigation bar-->
@@ -29,9 +30,27 @@ window.handleMealsRequest = () => {
         </div>
         <!--This row contain two column inside-->
         <div class="allMeals">
+              <div class="search">
+                  <input type="search"   id="meals" name="search" placeholder="Search meal..">
+                    
+                </div>
+              <!-- try rend searched meal -->  
+                <div class="book-meal">
+                    <div class="allMeals">               
+                        <div class="meal-card">
+                            <div class="clearfix">                             
+                                <div class="meal-type">
+                                                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
             <!--leftcolumn with items-->
+              
             <div class="meal-card">
-
+               
                 <div class="clearfix">
                     <div class="meal-type">
                         <div class="meal-container">
@@ -51,7 +70,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/1" data-navigo>
+                                <a href="BookMeal/1" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -80,7 +99,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/2" data-navigo>
+                                <a href="BookMeal/2" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -110,7 +129,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/3" data-navigo>
+                                <a href="BookMeal/3" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -140,7 +159,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/4" data-navigo>
+                                <a href="BookMeal/4" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -178,7 +197,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/5" data-navigo>
+                                <a href="BookMeal/5" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -207,7 +226,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/6" data-navigo>
+                                <a href="BookMeal/6" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -237,7 +256,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/7" data-navigo>
+                                <a href="BookMeal/7" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -267,7 +286,7 @@ window.handleMealsRequest = () => {
 
                         <div class="add-meal-and-reviews">
                             <div class="add-meal">
-                                <a href="AddMeal/8" data-navigo>
+                                <a href="BookMeal/8" data-navigo>
                                      <button>Book Meal</button>
                                 </a>                                
                             </div>
@@ -312,7 +331,10 @@ window.handleMealsRequest = () => {
 	fetch("/api/meals")
 		.then((response) => response.json())
 
-		.then((meals) => renderMeals(meals));
+		.then((meals) => {
+			renderMeals(meals);
+			getMealResult(meals);
+		});
 
 	const price_chicken_kiev = document.getElementById("pr_chicken_kiev");
 
@@ -325,6 +347,116 @@ window.handleMealsRequest = () => {
 	const price_chicken_souvlaki = document.getElementById("pr_chicken_souvlaki");
 	const price_turkish_kebabs = document.getElementById("pr_turkish_kebabs");
 	const price_baja_tacos = document.getElementById("pr_baja_tacos");
+
+	//search meal
+	const inputSearch = document.getElementById("meals");
+
+	//function to rende meal result from search
+	const mealType = document.querySelector(".meal-type");
+
+	function renderMealResult(meals) {
+		meals.forEach((meal) => {
+			const li = document.createElement("li");
+			// display chicken_kiev
+			if (meal.id === 1) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+
+				//singapore_chilli_crab
+			} else if (meal.id === 2) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+
+				//spicy_lamb
+			} else if (meal.id === 3) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+
+				//sheng_jian
+			} else if (meal.id === 4) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+
+				//lamb_shoulder
+			} else if (meal.id === 5) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+
+				//chicken_souvlaki
+			} else if (meal.id === 6) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+				//turkish_kebabs
+			} else if (meal.id === 7) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+
+				//baja_tacos
+			} else if (meal.id === 8) {
+				li.innerHTML = `<div class="meal-container">
+                            <div class="meal-text">
+                                <h4>${meal.title} </h4>
+                                <p>${meal.description}</p>                                 
+                            </div>
+                        </div>`;
+				mealType.appendChild(li).style.listStyle = "none";
+			}
+		});
+	}
+	function getMealResult(meals) {
+		inputSearch.addEventListener("input", searchMeal);
+
+		function searchMeal(e) {
+			let getMeal = e.target.value;
+			console.log("see", getMeal);
+
+			const listMeals = meals
+				.filter(
+					(meal) => meal.title.includes(getMeal.toUpperCase()) && getMeal != ""
+				)
+				.map((meal) => {
+					return meal;
+				});
+
+			console.log("see", listMeals);
+			renderMealResult(listMeals);
+		}
+	}
 
 	function renderMeals(meals) {
 		meals.forEach((meal) => {

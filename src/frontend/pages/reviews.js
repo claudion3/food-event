@@ -29,6 +29,7 @@ window.handleReviewsRequest = async () => {
         </div>
         <!--This row contain two column inside-->
         <div class="allMeals">
+              
             <!--leftcolumn with items-->
             <div class="meal-card">
                 <div class="clearfix">

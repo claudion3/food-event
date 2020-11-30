@@ -299,7 +299,30 @@ img {
 	clear: both;
 	display: table;
 }
-
+.search {
+	width: 100%;
+	display: flex;
+	margin: 2% 4%;
+}
+.search button {
+	padding: 2px 4px;
+	margin: 3px;
+	margin-right: 5px;
+	background: #ddd;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.search input {
+	height: 30px;
+	padding-left: 45px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
 /******************************************************social meadia*******************************************/
 .fa {
 	padding: 2px;
@@ -466,7 +489,7 @@ table tr:not(:first-child):hover {
 	color: #f8ce0b;
 }
 /* Responsive layout - when the screen is less than 700px wide */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	body,
 	.wrapper {
 		width: 100%;
@@ -484,6 +507,26 @@ table tr:not(:first-child):hover {
 		width: 100%;
 		font-weight: bold;
 	}
+	.front-image img {
+		align-items: center;
+		width: 100%;
+		margin-top: -6%;
+	}
+	.book-meal {
+		width: 100%;
+		margin: 1%;
+		padding: 1% 4% 1% 1%;
+	}
+
+	.reserv-form {
+		width: 100%;
+		margin: 3%;
+	}
+	.reserv-form table {
+		width: 90%;
+		margin: 3%;
+	}
+
 	.allMeals {
 		width: 100%;
 	}
@@ -528,11 +571,26 @@ table tr:not(:first-child):hover {
 	.title h1 {
 		font-size: 20px;
 	}
+
 	.meal-card,
 	.meal-container,
 	.meal-text,
 	.meal-type {
 		width: 100%;
+	}
+	.book-meal {
+		width: 100%;
+		margin: 1%;
+		padding: 1% 6% 1% 1%;
+	}
+
+	.reserv-form {
+		width: 100%;
+		margin: 3%;
+	}
+	.reserv-form table {
+		width: 90%;
+		margin: 3%;
 	}
 	.navbar ul {
 		float: none;

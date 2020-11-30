@@ -1,4 +1,4 @@
-window.handleAddMealRequest = async (params) => {
+window.handleBookMealRequest = async (params) => {
 	document.body.innerHTML = `
 <head>
     <meta charset="UTF-8">
