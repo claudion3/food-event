@@ -87,7 +87,7 @@ body {
 	display: block;
 	position: absolute;
 	left: 3%;
-	top: 190;
+	top: 180;
 }
 
 .title p {
@@ -149,6 +149,7 @@ a:visited {
 }
 
 /******************************************************meals*******************************************/
+
 .allMeals:after {
 	content: "";
 	display: table;
@@ -510,8 +511,9 @@ table tr:not(:first-child):hover {
 	.front-image img {
 		align-items: center;
 		width: 100%;
-		margin-top: -6%;
+		margin-top: -7%;
 	}
+
 	.book-meal {
 		width: 100%;
 		margin: 1%;
@@ -538,6 +540,9 @@ table tr:not(:first-child):hover {
 	.meal-type {
 		width: 100%;
 		height: auto;
+	}
+	.meal-card {
+		padding-right: 6%;
 	}
 	footer {
 		font-size: 13px;
@@ -583,7 +588,9 @@ table tr:not(:first-child):hover {
 		margin: 1%;
 		padding: 1% 6% 1% 1%;
 	}
-
+	.meal-card {
+		padding-right: 10%;
+	}
 	.reserv-form {
 		width: 100%;
 		margin: 3%;
@@ -591,6 +598,11 @@ table tr:not(:first-child):hover {
 	.reserv-form table {
 		width: 90%;
 		margin: 3%;
+	}
+	.front-image img {
+		align-items: center;
+		width: 100%;
+		margin-top: -8%;
 	}
 	.navbar ul {
 		float: none;

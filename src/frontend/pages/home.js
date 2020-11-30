@@ -34,7 +34,7 @@ window.handleHomeRequest = () => {
                <h1>International food fair</h1>
                <p>Come join us and taste food <br> for all over the world</p>           
             </div>
-            <img src="./images/background2.jpg" alt="street-food">
+            <img src="./images/background2.jpg" alt="background image">
         </div>
 </div>
        <!--footer-->

@@ -443,18 +443,17 @@ window.handleMealsRequest = () => {
 
 		function searchMeal(e) {
 			let getMeal = e.target.value;
-			console.log("see", getMeal);
+			console.log("see1", getMeal);
+			if (getMeal !== "") {
+				const listMeals = meals
+					.filter((meal) => meal.title.includes(getMeal.toUpperCase()))
+					.map((meal) => {
+						return meal;
+					});
 
-			const listMeals = meals
-				.filter(
-					(meal) => meal.title.includes(getMeal.toUpperCase()) && getMeal != ""
-				)
-				.map((meal) => {
-					return meal;
-				});
-
-			console.log("see", listMeals);
-			renderMealResult(listMeals);
+				console.log("see", listMeals);
+				renderMealResult(listMeals);
+			}
 		}
 	}
 
